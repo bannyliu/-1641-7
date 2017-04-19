@@ -6,12 +6,13 @@ module.exports ={
   //入口
   // entry:'./src/script/app.js',
   entry:{
-    app:'./src/script/app.js'//js文件和scss文件改变了也会自动生成带有哈希值的js
+    'script/app':'./src/script/app.js'//js文件和scss文件改变了也会自动生成带有哈希值的js
   },
   //出口
   output:{
     path:__dirname+'/build/',
-    filename:'[name]_[hash].js'//哈希值
+    // filename:'[name]_[hash].js'//哈希值
+    filename:'[name]_[chunkhash:8].js'
   },
   //服务器
   devServer:{
@@ -21,11 +22,16 @@ module.exports ={
   },
   module:{
     loaders:[
-      //babel-loader 解析es6
+      //babel-loader 解析es6,jsx
       {
         test:/\.js$/,
         exclude:/node_modules/,//排除node_modules
-        loader:'babel-loader'
+        loader:'react-hot-loader!babel-loader'
+      },
+      {
+        test:/\.jsx$/,
+        exclude:/node_modules/,//排除node_modules
+        loader:'react-hot-loader!babel-loader'
       },
       // {
       //   test:/\.css$/,
@@ -59,7 +65,7 @@ module.exports ={
   plugins:[
     //抽离css文件
     new ExtractTextPlugin({
-      filename:'[name]_[hash].css',
+      filename:'app.css',
       allChunks:true,//多入口
       disable:false//是不是打开抽离
     }),
@@ -78,8 +84,13 @@ module.exports ={
         comments:false//不要注释
       }
     }),
-    new OpenBrowserPlugin({//自动打开浏览器
-      url:'http://localhost:7000'
+    // new OpenBrowserPlugin({//自动打开浏览器
+    //   url:'http://localhost:7000'
+    // })
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
     })
   ]
 }
