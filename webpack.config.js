@@ -18,7 +18,7 @@ module.exports ={
   devServer:{
     contentBase:'./build',
     host:'localhost',
-    port:7000
+    port:9000
   },
   module:{
     loaders:[
