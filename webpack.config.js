@@ -73,7 +73,7 @@ module.exports ={
     new HtmlPlugin({
       template:'./src/index.ejs',
       filename:'index.html',
-      title:'super8'
+      title:'优集品'
     }),
     //压缩代码
     new webpack.optimize.UglifyJsPlugin({
@@ -92,5 +92,12 @@ module.exports ={
         NODE_ENV: JSON.stringify('production')
       }
     })
-  ]
+  ],
+  //组建抽离
+  externals:{
+    'react':'window.React',
+    'react-dom':'window.ReactDOM',
+    'react-router':'window.ReactRouter'
+  }
+
 }
