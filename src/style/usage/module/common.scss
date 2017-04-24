@@ -1,0 +1,37 @@
+$base-color: #00b38a;
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+@import "../fragment/yo-header";
+
+@include yo-header(
+  $bgcolor: #31313C,
+  $color: #fff,
+  $font-size: .16rem,
+  $item-ico-color: #fff
+){
+  font-weight: normal;
+  height:.56rem;
+  line-height:.56rem;
+  .regret {
+    right: 0;
+    left: auto;
+  }
+}
+ul,ol{
+  list-style: none outside none;
+}
+a{
+  text-decoration: none;
+  color:#4f494B;
+}
+a,img{
+  vertical-align: top;
+
+}
+img{
+  border:0;
+}
