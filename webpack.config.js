@@ -18,7 +18,15 @@ module.exports ={
   devServer:{
     contentBase:'./build',
     host:'localhost',
-    port:9000
+    port:9000,
+    proxy: {    //　反向代理
+        '/pp': {
+            target: 'http://m.ujipin.com/api',
+            changeOrigin: true,
+            pathRewrite: {'^/pp': ''}
+        }
+     }
+
   },
   module:{
     loaders:[
