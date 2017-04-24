@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React,{Component} from 'react';
 class  Header extends Component{
   getSearch(){
@@ -18,4 +19,20 @@ class  Header extends Component{
   }
 }
 
+=======
+import React, {Component} from 'react'
+
+class Header extends Component{
+  render() {
+    return (
+      <div className="yo-header header">
+        <h2 className="title">title</h2>
+        <span className="yo-ico">&#xf07d; 返回</span>
+        <span className="affirm yo-ico">&#xf07e;</span>
+      </div>
+    )
+  }
+
+}
+>>>>>>> origin/20170419-baixiaomei
 export default Header

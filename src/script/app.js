@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 require('../style/app.scss')
 import React from 'react'
@@ -16,3 +17,19 @@ ReactDOM.render((
     <Route path="/hotlist/:type" component={HotList} ></Route>
   </Router>
 ),document.getElementById('root'))
+=======
+require('../style/app.scss')
+import React from 'react'
+
+import ReactDOM from 'react-dom'
+
+import List from './components/List'
+
+// import HotList from './components/HotList'
+
+ReactDOM.render(
+  (<List />
+  ),
+  document.getElementById('root')
+)
+>>>>>>> origin/20170419-baixiaomei
