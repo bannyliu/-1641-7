@@ -45,6 +45,7 @@ module.exports ={
 =======
     host:'localhost',
     port:9000,
+<<<<<<< HEAD
     proxy:{
       '/api': {
         target: 'http://m.ujipin.com/api',
@@ -57,6 +58,16 @@ module.exports ={
       }
 >>>>>>> origin/20170419-baixiaomei
     }
+=======
+    proxy: {    //　反向代理
+        '/pp': {
+            target: 'http://m.ujipin.com/api',
+            changeOrigin: true,
+            pathRewrite: {'^/pp': ''}
+        }
+     }
+
+>>>>>>> origin/TzzWorks
   },
   module:{
     loaders:[

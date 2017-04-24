@@ -1,0 +1,490 @@
+@charset "UTF-8";
+html,body{
+    background: #e6e6e6;
+}
+#root{
+    height: 100%;
+    background: #e6e6e6;
+}
+.u_Details{
+    height: 100%;
+    background: #e6e6e6;
+    .UpinDtails_F{
+        @include flexbox();
+        @include flex-direction(column);
+        height:100%;
+        position: relative;
+        background: #e6e6e6;
+        .UpinDtails_header{
+            width:100%;
+            height:.56rem;
+            background: #ccc;
+            // display: inline-block;
+        }
+        .UpinDtails_container{    // 不给高度
+            @include flex();
+            overflow-y: scroll;
+            width:100%;
+
+            //  内容区
+            .UpinDtails_section{ // 不给高度
+                width:100%;
+
+                // 轮播图
+                .UpinDtails_section_banner{
+                    width:100%;
+                    height:3.75rem;
+                    background: red;
+                    img{
+                        width:100%;
+                        height:100%;
+                    }
+                }
+                //  标题区
+                .UpinDtails_section_title{
+                    width:100%;
+                    height:2.16rem;
+                    background: #fff;
+                    //  标题名称
+                    .UpinDtails_section_title_name{
+                        width:100%;
+                        height:.68rem;
+                        // margin-top:.2rem;
+                        padding:.2rem .08rem 0 .16rem;
+                        div{
+                            width:100%;
+                            height:.48rem;
+                            font-size: .18rem;
+                            display: block;
+                            line-height: .24rem;
+                            font-weight: normal;
+                        }
+                    }  //  UpinDtails_section_title_name 标题名称
+                    //  价格
+                    .UpinDtails_section_title_price{
+                        width:100%;
+                        height:.56rem;
+                        padding:.16rem .08rem .16rem .16rem;
+                        display: block;
+                        position: relative;
+                        //  现价
+                        .price_now{
+                            height:.24rem;
+                            line-height: .24rem;
+                            color:#E74C3C;
+                            font-size: .22rem;
+                            display: inline-block;
+                        }
+                        //  原价
+                        .price_origin{
+                            height:.24rem;
+                            line-height: .24rem;
+                            color:#BEBDBB;
+                            font-size: .14rem;
+                            display: inline-block;
+                            text-decoration: line-through;
+                            padding-left:0.08rem;
+                        }
+                        //  已售
+                        .sales{
+                            height:.24rem;
+                            line-height: .24rem;
+                            font-size: 14px;
+                            color: #BEBDBB;
+                            display: inline-block;
+                            position: absolute;
+                            right: 8px;
+                        }
+                    }  //UpinDtails_section_title_price 价格
+                    // 限时优惠
+                    .UpinDtails_section_title_discount{
+                        width:100%;
+                        background: #F5F7F8;
+                        .discount{
+                            width: 100%;
+                            height:.56rem;
+                            @include border(1px 0 0 0, #BEBDBB,solid);
+                            overflow: hidden;
+                            a{
+                                @include flexbox();
+                                width: 100%;
+                                height:100%;
+                                padding:.12rem;
+                                color: #4F494B;
+                                line-height: .3rem;
+                                .discount_span1{
+                                    display: inline-block;
+                                    width: .9rem;
+                                    height:.3rem;
+                                    overflow: hidden;
+                                    .upassIconLeft{
+                                        width:.15rem;
+                                        height:.3rem;
+                                        display: inline-block;
+                                        background-image:url(/images/Details/upassIconLeft.png);
+                                        background-size: 100%;
+                                    }
+                                    .upassIcon{
+                                        display: inline-block;
+                                        padding:0 .02rem;
+                                        vertical-align: top;
+                                        min-width: .46rem;
+                                        height: .30rem;
+                                        line-height: .30rem;
+                                        color: #E74C3C;
+                                        text-align: center;
+                                        background-image:url(/images/Details/upassIcon.png);
+                                    }
+                                    .upassIconRight{
+                                        width:.15rem;
+                                        height:.3rem;
+                                        display: inline-block;
+                                        background-image:url(/images/Details/upassIconRight.png);
+                                        background-size: 100%;
+                                    }
+                                }
+                                .discount_span2{
+                                    @include flex();
+                                    display: block;
+                                    width: 100%;
+                                    height:.3rem;
+                                    color: #4F494B;
+                                    padding-left:.1rem;
+                                }
+                            }  // a
+                        }
+                    }  // UpinDtails_section_title_discount 限时优惠
+                    // 承诺
+                    .UpinDtails_section_title_promise{
+                        width: 100%;
+                        height:0.36rem;
+                        display: inline-block;
+                        position: relative;
+                        span{
+                            width:.6rem;
+                            height:.24rem;
+                            display: inline-block;
+                            margin: 6px 0 6px 16px;
+                            margin-left: 16px;
+                            font-size: .12rem;
+                            text-align: center;
+                            line-height: .24rem;
+                        }
+                        .promise_d{
+                            width:.22rem;
+                            height:.22rem;
+                            position: absolute;
+                            right: .16rem;
+                            top:.07rem;
+                            background-image: url(/images/Details/icon03.png);
+                            background-size: 100%;
+                            display: inline-block;
+                        }
+
+                    }  // UpinDtails_section_title_promise 承诺
+
+                }  //UpinDtails_section_title 标题区
+
+                .UpinDtails_section_style{
+                    width:100%;
+                    height:.52rem;
+                    margin-top: .1rem;
+                    padding: 0 .16rem;
+                    line-height: .52rem;
+                    display: inline-block;
+                    position: relative;
+                    background: #fff;
+                    .style_R{
+                        width:.22rem;
+                        height:.22rem;
+                        position: absolute;
+                        right: .16rem;
+                        top:.15rem;
+                        background-image: url(/images/Details/icon03.png);
+                        background-size: 100%;
+                        display: inline-block;
+                    }
+                }
+                .UpinDtails_section_more{
+                    width:100%;
+                    height:1.3rem;
+                    margin-top: .1rem;
+                    background: #fff;
+                    a{
+                        width:100%;
+                        height:100%;
+                        display: block;
+                        color:#4F494B;
+                        .more_A{
+                            width:100%;
+                            height:.85rem;
+                            padding:.16rem;
+                            overflow: hidden;
+                            position: relative;
+                            .more_pic{
+                                width:.53rem;
+                                height:.53rem;
+                                display: inline-block;
+                                img{
+                                    width: 100%;
+                                    height:100%;
+                                    border-radius:50%;
+                                }
+                            }
+                            .more_title{
+                                width:100%;
+                                height:.52rem;
+                                display: block;
+                                position: absolute;
+                                top:16px;
+                                left:90px;
+                                .more_title_name{
+                                    font-size: .14rem;
+                                    margin-bottom: .08rem;
+                                    padding-top: .07rem;
+                                }
+                                .more_title_explain{
+                                    width: 70%;
+                                    height: .18rem;
+                                    color: #B3B3B3;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    span{
+                                        width:.42rem;
+                                        height:.18rem;
+                                        display: inline-block;
+                                        line-height: .18rem;
+                                        font-size: .12rem;
+                                        padding-left:.18rem;
+                                        position: relative;
+                                        i{
+                                            width:.15rem;
+                                            height:.18rem;
+                                            position: absolute;
+
+                                        }
+                                    }
+                                    em{
+                                        padding-left: .1rem;
+                                        font-size: .12rem;
+                                    }
+                                }
+                            }
+                            .more_R{
+                                width: .22rem;
+                                height:.22rem;
+                                position: absolute;
+                                top:40px;
+                                right:16px;
+                                background-image: url(/images/Details/icon03.png);
+                                background-size: 100%;
+                            }
+                        }
+                        .more_many{
+                            height:.44rem;
+                            display:block;
+                            line-height: .44rem;
+                            text-align: center;
+                            @include border(1px 0 0 0, #e6e6e6,solid);
+                        }
+                    }
+                }  //UpinDtails_section_more 更多
+
+                .UpinDtails_section_attribute{
+                    width:100%;
+                    margin-top:.1rem;
+                    background: #fff;
+                    color:#4F494B;
+                    .attribute_title{
+                        width:100%;
+                        // height:.38rem;
+                        line-height: .38rem;
+                        padding-left:.16rem;
+                        font-size: .18rem;
+                    }
+                    .attribute_notes{
+                        width:100%;
+                        height:.38rem;
+                        display: block;
+                        table{
+                            width: 100%;
+                            height:1.8rem;
+                            table-layout: fixed;
+                            word-wrap: break-word;
+                            @include border(1px 0 0 0, #ededed,solid);
+                            tr{
+                                width: 100%;
+                                @include border(0 0 1px 0, #ededed,solid);
+                                // display: inline-block;
+                                vertical-align: middle;
+                                td{
+                                    padding:.13rem .05rem;
+                                    line-height: .2rem;
+                                    font-size: .12rem;
+                                    &.active{
+                                        width: .6rem;
+                                        text-align: center;
+                                        @include border(0 1px 0 0, #ededed,solid);
+                                    }
+                                    &.con{
+                                        width:100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }  //UpinDtails_section_attribute 商品属性
+
+                .UpinDtails_section_introduce{
+                    width:100%;
+                    margin-top:.1rem;
+                    background: #fff;
+                    color:#4F494B;
+                    .introduce_title{
+                        width:100%;
+                        height:.38rem;
+                        line-height: .38rem;
+                        padding-left:.16rem;
+                        font-size: .18rem;
+                    }
+                    .introduce_txt{
+                        width:100%;
+                        padding-bottom: 40px;
+                        color: #47494b;
+                        .txtFirst{
+                            padding:.12rem .16rem 0 .16rem;
+                        }
+                        .txtSecond{
+                            padding:.16rem .08rem 0 .08rem;
+                        }
+                    }
+                }  //UpinDtails_section_introduce  商品详情
+
+                .UpinDtails_section_careful{
+                    width:100%;
+                    margin-top:.1rem;
+                    background: #fff;
+                    color:#4F494B;
+                    .careful_title{
+                        width:100%;
+                        height:.38rem;
+                        line-height: .38rem;
+                        padding-left:.16rem;
+                        font-size: .18rem;
+                    }
+                    ul{
+                        width:100%;
+                        padding:.12rem .16rem .24rem .16rem;
+                        li{
+                            font-size: .14rem;
+                            color: #828282;
+                            line-height: .22rem;
+                        }
+                    }
+                }  //UpinDtails_section_careful  注意事项
+
+                .UpinDtails_section_comment{
+                    width:100%;
+                    margin-top:.1rem;
+                    background: #fff;
+                    color:#4F494B;
+                    .comment_title{
+                        width:100%;
+                        height:.38rem;
+                        line-height: .38rem;
+                        padding-left:.16rem;
+                        font-size: .18rem;
+                    }
+                    ul{
+                        width:100%;
+                        padding:.12rem .16rem .24rem .16rem;
+                        li{
+                            font-size: .14rem;
+                            color: #828282;
+                            line-height: .22rem;
+                        }
+                    }
+                    .comment_more{
+                        height:.52rem;
+                        display:block;
+                        line-height: .52rem;
+                        text-align: center;
+                        @include border(1px 0 0 0, #e6e6e6,solid);
+                    }
+                }  //UpinDtails_section_comment  用户评论
+
+                .UpinDtails_section_hot{
+                    width:100%;
+                    height:2.48rem;
+                    overflow: hidden;
+                    margin-top: .1rem;
+                    background: #fff;
+                    // margin-bottom: .6rem;
+
+                    .hot_title{
+                        width:100%;
+                        height:.38rem;
+                        line-height: .38rem;
+                        padding-left:.16rem;
+                        font-size: .18rem;
+                    }
+                    .hot_list{
+                        overflow-x: scroll;
+                        width:100%;
+                        padding:.08rem;
+                        ul{
+                            // width:20rem;
+                            // display: block;
+                            @include flexbox();
+                            @include flex-wrap(no-wrap);
+                            li{
+                                width:1.14rem;
+                                margin-left: .08rem;
+                                display: inline-block;
+                                .hot_pic{
+                                    width: 1.14rem;
+                                    height:1.14rem;
+                                    display: inline-block;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                                .hot_title{
+                                    padding:.08rem 0;
+                                    display: block;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    font-size: .14rem;
+                                }
+                                .hot_newprice{
+
+                                    font-size: .14rem;
+                                    color: #E74C3C;
+                                    .hot_oldprice{
+                                        color: #BEBDBB;
+                                        text-decoration: line-through;
+                                        font-size: .14rem;
+                                        padding-left: .04rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+            }  //UpinDtails_section 内容区
+        } //UpinDtails_container 详情页
+
+        .UpinDtails_footer{
+            height:.48rem;
+            width:100%;
+            background: blue;
+        }
+
+    }
+}

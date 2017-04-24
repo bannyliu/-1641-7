@@ -3,6 +3,7 @@
 require('../style/app.scss')
 import React from 'react'
 import ReactDOM from 'react-dom'
+<<<<<<< HEAD
 import {Router,Route,hashHistory,IndexRoute,IndexRedirect} from 'react-router'
 import Index from './components/index'
 import List from './components/List'
@@ -33,3 +34,14 @@ ReactDOM.render(
   document.getElementById('root')
 )
 >>>>>>> origin/20170419-baixiaomei
+=======
+
+import {Router,Route,hasHistory,IndexRoute,IndexRedirect} from 'react-router'
+import Details from './components/Details'
+
+ReactDOM.render((
+
+  <Details />
+  
+), document.getElementById('root'))
+>>>>>>> origin/TzzWorks
