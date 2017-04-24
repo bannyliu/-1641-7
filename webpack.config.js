@@ -17,8 +17,20 @@ module.exports ={
   //服务器
   devServer:{
     contentBase:'./build',
-    host:'localhost',
-    port:9000
+    host:'10.9.157.57',
+    port:9000,
+    proxy:{
+      '/json':{
+      target:'http://m.ujipin.com/api',
+      changeOrigin:true,
+      pathRewrite:{'^/json':''}
+      }
+      // '/api': {
+      //   target: 'https://api.douban.com',
+      //   changeOrigin: true,
+      //   pathRewrite: {'^/api': ''}
+      // }
+    }
   },
   module:{
     loaders:[
