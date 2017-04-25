@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react'
 import Carousel from '../../../component_dev/carousel/src'
 // es6
@@ -6,7 +7,7 @@ console.log(Carousel);
 class DetailsBanner extends Component {
 
     getBanner(list){
-        
+
     }
 
   render() {

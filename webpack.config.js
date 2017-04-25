@@ -1,7 +1,8 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var HtmlPlugin = require('html-webpack-plugin')
 var webpack = require('webpack')
+var HtmlPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OpenBrowserPlugin = require('open-browser-webpack-plugin')
+// var OpenBrowserPlugin = require('open-browser-webpack-plugin')
 module.exports ={
   //入口
   // entry:'./src/script/app.js',
@@ -11,22 +12,29 @@ module.exports ={
   //出口
   output:{
     path:__dirname+'/build/',
+
     // filename:'[name]_[hash].js'//哈希值
     filename:'[name]_[chunkhash:8].js'
+
   },
   //服务器
   devServer:{
     contentBase:'./build',
+
     host:'localhost',
     port:9000,
-    proxy: {    //　反向代理
-        '/pp': {
-            target: 'http://m.ujipin.com/api',
-            changeOrigin: true,
-            pathRewrite: {'^/pp': ''}
-        }
-     }
-
+    proxy:{
+      '/json':{
+      target:'http://m.ujipin.com/api',
+      changeOrigin:true,
+      pathRewrite:{'^/json':''}
+    },
+      '/api': {
+        target: 'http://m.ujipin.com/api',
+        changeOrigin: true,
+        pathRewrite: {'^/api': ''}
+      }
+    }
   },
   module:{
     loaders:[
@@ -36,6 +44,7 @@ module.exports ={
         exclude:/node_modules/,//排除node_modules
         loader:'react-hot-loader!babel-loader'
       },
+
       {
         test:/\.jsx$/,
         exclude:/node_modules/,//排除node_modules
@@ -63,21 +72,19 @@ module.exports ={
           use:'css-loader!sass-loader'
         })
       }
-
-
-
-
     ]
   },
   //插件  npm i extract-text-webpack-plugin抽离文本
   plugins:[
     //抽离css文件
     new ExtractTextPlugin({
+
       filename:'app.css',
       allChunks:true,//多入口
       disable:false//是不是打开抽离
     }),
     //根据模版自动生成html
+
     new HtmlPlugin({
       template:'./src/index.ejs',
       filename:'index.html',
