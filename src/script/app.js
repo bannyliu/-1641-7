@@ -11,15 +11,13 @@ import Personal from './components/login_register/personal'
 import Agreement from './components/login_register/agreement'
 
 ReactDOM.render((
-  <Router history={browserHistory}>
-    <Route path="/" component={Index} >
-    </Route>
-    <Route path="/list/:type" component={List} />
-    <Route path="/details/:type" component={Details} />
+  <Router history={hashHistory}>
+    <Route path="/" component={Index} />
+    <Route path="/list(/:type)" component={List} />
+    <Route path="/details(/:type)" component={Details} />
     <Route path="/hotlist" component={HotList} />
     <Route path="/login" component={Login} />
     <Route path="/personal" component={Personal} />
     <Route path="/agreement" component={Agreement} />
-
   </Router>
 ),document.getElementById('root'))

@@ -7,10 +7,7 @@ module.exports ={
   //入口
   // entry:'./src/script/app.js',
   entry:{
-
     'script/app':'./src/script/app.js'//js文件和scss文件改变了也会自动生成带有哈希值的js
-
-
   },
   //出口
   output:{

@@ -10,36 +10,28 @@ class DetailsAttribute extends Component {
     }
     getAttribute(list) {
         if (!this.isEmptyObject(list)) {
-            console.log(list)
-
-            // return list.map((value,index)=>{
-            // for (var [key, value] of list) {
-            //    console.log(key + value);
-            // }
-            // for(let value in str){
-            //     return(
-            //         <div>
-            //             <div className="attribute_title">商品属性</div>
-            //             <div className="attribute_notes">
-            //                 <table>
-            //
-            //                      <tr>
-            //                         <td className="active">{value}</td>
-            //                         <td className="con">{value}</td>
-            //                     </tr>
-            //
-            //                 </table>
-            //             </div>
-            //         </div>
-            //     )
-            // }
-            // })
+            let arr = []
+            for(let value in list){
+              arr.push(value)
+            }
+          return  arr.map((value,index)=>{
+              return(
+                <tr>
+                  <td className="active">{value}</td>
+                  <td className="con">{list[value]}</td>
+                </tr>)
+              })
         }
     }
     render() {
         return (
-            <div className="UpinDtails_section_attribute">
-                {this.getAttribute(this.props.AttributeList)}
+            <div>
+                  <div className="attribute_title">商品属性</div>
+                  <div className="attribute_notes">
+                      <table>
+                        {this.getAttribute(this.props.AttributeList)}
+                      </table>
+                  </div>
             </div>
         )
     }
