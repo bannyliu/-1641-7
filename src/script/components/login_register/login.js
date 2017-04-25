@@ -3,7 +3,6 @@ import {Link} from 'react-router';
 
 class Login extends Component {
     render() {
-      console.log(this)
         return (
           <div className="m_login">
               <div className="Arrow" onClick={this.props.router.goBack}>

@@ -16,7 +16,7 @@ class Personal extends Component {
                     <input name="mobile" type="tel" className="mobile" placeholder="请输入账号"/>
                 </div>
                 <div className="items">
-                    <span className="iocn-phone">
+                    <span className="iocn-pho">
                       <em></em>
                     </span>
                     <input name="password" type="text" className="passW" placeholder="请输入密码"/>
@@ -26,6 +26,12 @@ class Personal extends Component {
                 <div className="list_title">
                     <i className="l"></i>社交帐号登录<i className="r"></i>
                 </div>
+                <div className="third-qq">
+                    <div className="third-btn">
+                        <a></a>
+                    </div>
+                </div>
+
 
               </div>
           </div>
