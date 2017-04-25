@@ -11,7 +11,7 @@ import Personal from './components/login_register/personal'
 import Agreement from './components/login_register/agreement'
 
 ReactDOM.render((
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={Index} >
     </Route>
     <Route path="/list/:type" component={List} />
