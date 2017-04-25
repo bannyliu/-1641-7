@@ -16,11 +16,9 @@ class SlideGoods extends Component{
           </div>
 
           <div className="swiper_wrapper">
-            <Scroller scrollX={true} scrollY={false}>
+            <Scroller containerExtraStyle = {{"width":"10.71rem"}} scrollX={true} scrollY={false}>
               <div className="swiper_goods">
-
                 {this.getSlideGoodsItems(this.props.SlideGoods[index].goods_list)}
-
               </div>
             </Scroller>
           </div>

@@ -1,20 +1,20 @@
 
-import React, {Component} from 'react'
-
-class DetailsFooter extends Component {
-    render() {
-        return (
-            <div>
-                <p className="price_now">
-                    <span className="price_tit">总价 </span>
-                    <span className="price_red"> ¥ 900</span>
-                </p>
-                <div className="Buy">立即购买</div>
-            </div>
-        )
-    }
-}
-export default DetailsFooter
+// import React, {Component} from 'react'
+//
+// class DetailsFooter extends Component {
+//     render() {
+//         return (
+//             <div>
+//                 <p className="price_now">
+//                     <span className="price_tit">总价 </span>
+//                     <span className="price_red"> ¥ 900</span>
+//                 </p>
+//                 <div className="Buy">立即购买</div>
+//             </div>
+//         )
+//     }
+// }
+// export default DetailsFooter
 /*
 import React, {Component} from 'react'
 
