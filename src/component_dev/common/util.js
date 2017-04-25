@@ -18,14 +18,11 @@ function is(x, y) {
     return ret;
 }
 
-<<<<<<< HEAD
 // 判断是否为 Function
 export function isFunction(it) {
     return Object.prototype.toString.call(it) === '[object Function]';
 }
 
-=======
->>>>>>> origin/20170419-baixiaomei
 export function shallowEqual(objA, objB) {
     if (is(objA, objB)) {
         return true;
@@ -88,7 +85,6 @@ export function getOnlyChild(props) {
     }
     return false;
 }
-<<<<<<< HEAD
 /*
     This should find all Android browsers lower than build 535.19 (both stock browser and webview)
     - galaxy S2 is ok
@@ -164,5 +160,3 @@ export function whichTransitionEventPrefix() {
     });
     return result;
 }
-=======
->>>>>>> origin/20170419-baixiaomei

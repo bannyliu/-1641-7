@@ -31,7 +31,7 @@ class BoxGoods extends Component{
     return list.map((value,index)=>{
       return (
         <li>
-          <Link to="/details/${value.goods_id}"><img src={value.thumbnail} /></Link>
+          <Link to={`/details/${value.goods_id}`}><img src={value.thumbnail} /></Link>
           <div className="goods_list_iofo">
             <div className="selling_point">{value.selling_point
 }</div>

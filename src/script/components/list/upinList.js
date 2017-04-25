@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 // import Header from '../common/Header'
-
+import {Link} from 'react-router'
 class UpinList extends Component{
     constructor(props){
       super(props)
@@ -13,9 +13,10 @@ class UpinList extends Component{
       return list.map((value,index)=>{
         return(
           <li>
-              <a href="" className="track">
+              <Link to={`/details/${value.goods_id
+}`} className="track">
                 <img src={value.thumbnail} className="lazyload" width="187.5" height="187.5" />
-              </a>
+              </Link>
               <div className="goodList_info">
                   <div className="selling_point">{value.selling_point}</div>
                   <div className="g-name">{value.goods_name}</div>
@@ -38,7 +39,6 @@ class UpinList extends Component{
             <section>
                 <div className="brandList">
                     <img src={this.state.bannerPic} />
-                    console.log(this.state.bannerPic)
                 </div>
 
                 <div className="goodList">
@@ -57,9 +57,9 @@ class UpinList extends Component{
       // let type="this.props.params.type"
       // fetch(`/api/v4/tags/${type}`)
       // let domain = 'http://localhost:7001'
-
+      let type = this.props.type
 //http://m.ujipin.com/api/v4/tags/d7ee6e65bbef457a9012ba7ccd0e4201?page=1
-      fetch('/api/v4/tags/3fa2ea1ebc0049a7863217863b831ef7?page=1')
+      fetch(`/json/v4/tags/${type}?page=1`)
       // fetch('/api/v4/tags/3fa2ea1ebc0049a7863217863b831ef7?page=2')
       .then((response)=>(response.json()))
       .then((res)=>{

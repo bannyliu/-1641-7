@@ -13,7 +13,8 @@ class Banner extends Component{
   abc(list){
     return list.length>0?list.map((value,index)=>{
       return(
-          <li className="item"><img className="img" src={value.cover} /></li>
+          <li className="item"><Link to={`/list/${value.redirect_content
+  }`}><img className="img" src={value.cover} /></Link></li>
       )
     }):[<div />]
   }

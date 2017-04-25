@@ -8,7 +8,7 @@ class List extends Component{
     return (
       <div className="u-list">
           <Header />
-          <UpinList />
+          <UpinList type={this.props.params.type} />
       </div>
     )
   }

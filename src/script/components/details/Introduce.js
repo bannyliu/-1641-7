@@ -3,14 +3,16 @@ import React, {Component} from 'react'
 class DetailsIntroduce extends Component {
 
   getIntroduceTxt(list){
-    if (list && list.lenght>0) {
-      var commentNodes = list.map(function (comment){
+    //   console.log(list)
+    if (list && list.length>0) {     // 格式，方法
+       return list.map((value,index)=>{
           return (
-            <div>
-              <h1>{comment.author}</h1>
-            </div>
-          );
-      });
+                <div>
+                    <p className="txtFirst">{value.content}</p>
+                    <p className="txtSecond"><img src={value.image} alt=""/></p>
+                </div>
+          )
+      })
     }
   }
   // console.log(this.props.IntroduceList.slices)

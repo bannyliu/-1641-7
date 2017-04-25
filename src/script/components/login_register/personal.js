@@ -5,7 +5,7 @@ class Personal extends Component {
         return (
 
           <div className="m_login">
-              <div className="Arrow">
+              <div className="Arrow" onClick={this.props.router.goBack}>
                 <img src="http://m.ujipin.com/media/images/icon17.png"/>
               </div>
               <div className="login-items">
@@ -22,11 +22,11 @@ class Personal extends Component {
                     <input name="password" type="text" className="passW" placeholder="请输入密码"/>
                 </div>
                 <div className="sr-hide">输入有误</div>
-                <input className="login-btn" type="submit" value="登 录"/>
+                <input className="login-bt" type="submit" value="登 录"/>
                 <div className="list_title">
                     <i className="l"></i>社交帐号登录<i className="r"></i>
                 </div>
-                
+
               </div>
           </div>
 

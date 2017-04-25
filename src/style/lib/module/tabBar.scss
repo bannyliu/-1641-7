@@ -1,0 +1,26 @@
+.m-tabbar{
+  width:100%;
+  height:.5rem;
+  @include flexbox();
+  background-color:#fff;
+  div{
+    @include flex();
+    height:100%;
+    @include flexbox();
+    @include flex-direction(column);
+    justify-content:center;
+    text-align:center;
+    padding-top:.1rem;
+    padding-bottom:.09rem;
+    width:100%;
+    span{
+      font-size:.1rem;
+    }
+    i{
+      font-size:.2rem;
+    }
+    &.active{
+      color:#c59591;
+    }
+  }
+}

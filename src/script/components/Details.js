@@ -6,7 +6,7 @@ class Details extends Component{
     render(){
         return(
             <div className="u_Details">
-                <UpinDtails />
+                <UpinDtails type={this.props.params.type}/>
             </div>
         )
     }

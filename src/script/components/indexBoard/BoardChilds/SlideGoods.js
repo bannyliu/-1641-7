@@ -20,7 +20,7 @@ class SlideGoods extends Component{
               <div className="swiper_goods">
 
                 {this.getSlideGoodsItems(this.props.SlideGoods[index].goods_list)}
-                
+
               </div>
             </Scroller>
           </div>

@@ -1,0 +1,340 @@
+@import "../component/carousel";
+@include yo-carousel(
+  $name:a,
+  $index-bgcolor:#dedede,
+  $on-index-bgcolor:#E74C3C
+){
+  height:1.88rem;
+  background-image:url(/images/defaultImg.png);
+  background-size:100%;
+};
+.m-index{
+  @include flexbox();
+  @include flex-direction(column);
+  height:100%;
+  .m-board{
+    @include flex();
+    overflow:hidden;
+    width:100%;
+    .yo-scroller-a{
+      height:100%;
+      .index_swiper{
+        width:100%;
+        position:relative;
+        .index_swiper_images{
+          position:relative;
+          width:100%;
+          height:1.88rem;
+          div{
+            position:absolute;
+            a{
+              img{
+                width:100%;
+                height:100%;
+              }
+            }
+          }
+        }
+        .index_swiper_icon{
+          position:absolute;
+          width:100%;
+          bottom:.1rem;
+          left:0;
+          text-align:center;
+          span{
+            width:.08rem;
+            height:.08rem;
+            display:inline-block;
+            @include border-radius(100%);
+            background-color:#dedede;
+            margin:0 .05rem;
+            &.active{
+              background-color:#E74C3C;
+            }
+          }
+        }
+      }
+      .m-nav{
+        margin-top:2%;
+        padding:0 2%;
+        background-color:#fff;
+        @include flexbox();
+        width:100%;
+        >div{
+          @include flex();
+          img{
+            width:100%;
+          }
+        }
+      }
+      .m-row{
+        width:100%;
+        height:1.88rem;
+        .row{
+          margin-top:2%;
+          a{
+            display:block;
+            width:100%;
+            height:1.88rem;
+            img{
+              width:100%;
+              height:100%;
+            }
+          }
+        }
+      }
+      .m-timeCut{
+        margin-top:2%;
+        background-color:#fff;
+        .col{
+          padding:.1rem 0;
+          width:100%;
+          height:1.62rem;
+          position:relative;
+          img{
+            width:38%;
+          }
+          .seckill-price{
+            position:absolute;
+            left:35%;
+            top:51%;
+            text-align:center;
+            color:#E74C3C;
+            span{
+              display:block;
+              width:.45rem;
+              height:.45rem;
+              border-radius:10px;
+              line-height:.45rem;
+              @include border(1px,#E74C3C,dotted,50%);
+              font-size:.14rem;
+            }
+          }
+          .info{
+            width:40%;
+            position:absolute;
+            top:50%;
+            right:.2rem;
+            transform:translateY(-50%);
+            img{
+              width:1.28rem;
+              height:.52rem;
+            }
+            .time_block{
+              margin-top:7%;
+              color:#000;
+              span{
+                width:24%;
+                height:.32rem;
+                line-height:.32rem;
+                font-size:.14rem;
+                text-align:center;
+                display:inline-block;
+                @include border-radius(.05rem);
+                background-color:#f5f5f5;
+                margin: 0 .03rem;
+              }
+              span:first-of-type{
+                margin-left:0
+              }
+            }
+          }
+        }
+      }
+      .m-slide{
+        .slideGoods{
+          margin-top:2%;
+          background-color:#fff;
+          .slide_images{
+            position:relative;
+            a{
+              display:block;
+              width:100%;
+              height:1.88rem;
+              >img{
+                width:100%;
+              }
+            }
+            .triangle-up{
+              width:0;
+              height:0;
+              position:absolute;
+              border-right:.08rem solid transparent;
+              border-left:.08rem solid transparent;
+              border-bottom:.08rem solid #fff;
+              // @include border(10px 8px 10px 8px,transparent transparent #fff transparent);
+              left:8%;
+              bottom:0;
+            }
+          }
+          .swiper_wrapper{
+            width:100%;
+            height:1.84rem;
+            .swiper_goods{
+              height:100%;
+              @include flexbox();
+              overflow:hidden;
+              .swiper_goods_items{
+                @include flex();
+                width:1.46rem;
+                margin-right:.08rem;
+                height:100%;
+
+                a{
+                  span.pro-img{
+                    background-image:url(http://ujipinwww.ufile.ucloud.com.cn/defaultImg-164*164.png);
+                    background-size:100%;
+                    display:block;
+                    img{
+                      width:100%;
+                      height:1.46rem;
+                    }
+                  }
+                  span.pro-title{
+                    padding:.04rem .03rem;
+                    display:block;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                    color:#4F494B;
+                    font-size:.12rem;
+                    line-height:.1rem;
+                  }
+                  span.pro-price{
+                    font-size:.13rem;
+                    color:#E74C3C;
+                    display:block;
+                    padding:0 .03rem;
+                    .old_price{
+                      color:#BEBDBB;
+                      text-decoration:line-through;
+                      padding-left:.05rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .m-boxGoods{
+        .box_goods{
+          margin-top:2%;
+          .goods_title{
+            height:.63rem;
+            text-align:center;
+            color:#4F494B;
+            font-size:.15rem;
+            line-height:.5rem;
+            img{
+              width:100%;
+              height:100%;
+            }
+          }
+          .goods_list{
+            padding:0 .05rem 0 0;
+            ul{
+              @include flexbox();
+              @include flex-wrap(wrap);
+              li{
+                height:2.7rem;
+                position:relative;
+                width:50%;
+                margin-top:2%;
+                @include border-radius(.05rem);
+                font-size:.13rem;
+                padding-left:.05rem;
+                a{
+                  display:block;
+                  img{
+                    width:100%;
+                    @include border-radius(.05rem .05rem 0 0);
+                  }
+                }
+                .goods_list_iofo{
+                  background-color:#fff;
+                  .selling_point{
+                    height:.15rem;
+                    padding:0 .08rem 0;
+                    overflow:hidden;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+                  }
+                  .g-name{
+                    line-height:.16rem;
+                    height:.32rem;
+                    margin:.08rem 0;
+                    padding:0 .08rem;
+                    overflow:hidden;
+                  }
+                  .g-price{
+                    padding:0 .08rem .08rem;
+                    color:#E74C3C;
+                    .g-market{
+                      font-szie:.12rem;
+                      color:#BEBDBB;
+                      padding-left:.1rem;
+                      text-decoration:line-through;
+                    }
+                  }
+                  .g-mark{
+                    position:absolute;
+                    left:5%;
+                    top:3%;
+                    width:.53rem;
+                    height:.53rem;
+                    img{
+                      width:100%;
+                      @include border-radius(.05rem .05rem 0 0);
+                    }
+                  }
+                  .hide{
+                    display:none;
+                  }
+                }
+              }
+              li.last_more{
+                height:2.7rem;
+                a{
+                  width:100%;
+                  height:100%;
+                  .goods-list-last{
+                    height:100%;
+                    background-image:url(/images/goods-list-bj.png);
+                    text-align:center;
+                    position:relative;
+                    background-size:100%;
+                    .text-box{
+                      position:absolute;
+                      width:100%;
+                      top:50%;
+                      transform:translateY(-50%);
+                      .title{
+                        @include border(0 0 5px 0,#828282);
+                        line-height:.3rem;
+                        margin:0 .2rem .1rem;
+                        font-size:.14rem;
+                        color:#4F494B;
+                      }
+                      .num{
+                        color:#4F494B;
+                      }
+                      .icon{
+                        display:inline-block;
+                        margin-top:.15rem;
+                        width:.17rem;
+                        height:.17rem;
+                        background-image:url(/images/icon55.png);
+                        background-size:100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

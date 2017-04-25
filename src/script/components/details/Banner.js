@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import {Carousel}  from '../../../component_dev/carousel/src'
+// es6
 
 class DetailsBanner extends Component {
   render() {

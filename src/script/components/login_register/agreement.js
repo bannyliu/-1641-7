@@ -4,6 +4,9 @@ class Agreement extends Component {
     render() {
         return (
           <div className="agreement">
+            <div className="Arrow" onClick={this.props.router.goBack}>
+              <div>返回</div>
+            </div>
             <ul>
               <li>
                 <i>提示：</i>

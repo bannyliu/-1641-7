@@ -52,17 +52,18 @@ class UpinDtails extends React.Component{
     }
 
     componentDidMount(){
-        fetch('/pp/v4/goods/31354')
+      let type= this.props.type
+        fetch(`/json/v4/goods/${type}`)
         .then((response)=>response.json())
         .then((res)=>{
-
+            // console.log(res.data.attributes)
             this.setState({
                 TitleList : res.data,
                 StyleList : res.data,
                 MoreList : res.data.brand,
                 AttributeList : res.data.attributes,
                 IntroduceList : res.data.story.slices,
-                CarefulList : res.data.tip
+                CarefulList : res.data.tips
             })
         })
     }

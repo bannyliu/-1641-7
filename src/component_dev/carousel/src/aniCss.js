@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 export default () => ({
     handleData(aniObj, children) {
         return children;
-=======
-export default (ALLOWANCE = 20) => ({
-    handleData(aniObj, children) {
-        return children
->>>>>>> origin/20170419-baixiaomei
     },
     touchstart() {},
     touchend(aniObj) {

@@ -1,10 +1,12 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 class Login extends Component {
     render() {
+      console.log(this)
         return (
           <div className="m_login">
-              <div className="Arrow">
+              <div className="Arrow" onClick={this.props.router.goBack}>
                 <img src="http://m.ujipin.com/media/images/icon17.png"/>
               </div>
               <div className="login-items">
@@ -25,10 +27,10 @@ class Login extends Component {
                   <input className="login-btn" type="submit" value="手机快捷登录"/>
                   <div className="tips-phone">
                     <p>未注册的手机号，登录时将自动注册，登录即表示您同意</p>
-                    <p><a href="/Agreement">《优集品用户协议》</a></p>
+                    <p><Link to={"/Agreement"}>《优集品用户协议》</Link></p>
                   </div>
                   <div className="login-id">
-                    <span>使用帐号登录</span>
+                    <Link to={"/Personal"}><span>使用帐号登录</span></Link>
                     <em></em>
                   </div>
               </div>
