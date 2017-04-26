@@ -43,7 +43,6 @@ class UpinList extends Component{
                       renderItem={(value,i)=>{
                         if(!this.isEmptyObject(value)){
                           return(
-
                             <li>
                                 <Link to={`/details/${value.goods_id
 }`} className="track">
