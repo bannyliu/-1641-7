@@ -11,13 +11,13 @@ import DetailsCareful from './Careful'
 import DetailsComment from './Comment'
 import DetailsHot from './Hot'
 import DetailsFooter from './Footer'
-//Footer
 
 class UpinDtails extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
+            BannerList:[],
             TitleList: [],
             StyleList: {},
             MoreList: {},
@@ -33,14 +33,13 @@ class UpinDtails extends React.Component {
 
     render() {
         return (
-
                 <div className="UpinDtails_F" >
                     <div className="UpinDtails_header" >
                         详情页头部
                     </div>
                     <div className="UpinDtails_container" >
                         <div className="UpinDtails_section" >
-                            <DetailsBanner />
+                            <DetailsBanner BannerList = { this.state.BannerList }/>
                             <DetailsTitle TitleList = { this.state.TitleList }/>
                             <DetailsStyle StyleList = { this.state.StyleList }/>
                             <DetailsMore MoreList = { this.state.MoreList }/>
@@ -66,6 +65,7 @@ class UpinDtails extends React.Component {
         .then((res) => {
             // console.log(res.data.attributes)
             this.setState({
+                BannerList : res.data.splash,
                 TitleList: res.data,
                 StyleList: res.data,
                 MoreList: res.data.brand,
