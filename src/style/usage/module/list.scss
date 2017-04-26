@@ -1,5 +1,9 @@
 @charset "UTF-8";
 // @import "../fragment/yo-header";
+.yo-scroller {
+  height: 100%;
+  touch-action: none;
+}
 .u-list{
   height:100%;
   @include flexbox();
@@ -19,29 +23,37 @@
           }
       }
       .goodList{
+        height:100%;
         width:100%;
         padding:0 .05rem 0 0;
           ul{
+            height:100%;
+            .yo-scoller{
+              height:100%;
+            }
+          }
+          .yo-list{
+            width:100%;
             @include flexbox();
             overflow:hidden;
             @include flex-wrap(wrap);
-            li{
+            .item{
+              background:#eee;
               width:50%;
+              height:2.79rem;
               overflow:hidden;
               position:relative;
               margin-top:2%;
               font-size:.13rem;
-               @include border($radius:5px);
-              padding-left:.05rem;
+              border-radius:.05rem;
+              padding:0 0 0 .05rem;
                 .track{
                   display:block;
                     .lazyload{
                       width:100%;
-                      border-radius: 5px 5px 0 0;
                     }
                 }
                 .goodList_info{
-                  // margin-top:.01rem;
                   background:#fff;
                   .selling_point{
                     padding:.05rem .08rem 0;
