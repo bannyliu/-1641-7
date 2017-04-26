@@ -3,7 +3,7 @@ import {Link} from 'react-router'
 class TimeCut extends Component{
   getTimeCut(value){
       return (
-        <a>
+        <Link to={"/hotlist"}>
           <img src={value.goods_thumbnail} />
           <div className="seckill-price"><span>¥{value.seckill_price}</span></div>
           <div className="info">
@@ -14,7 +14,7 @@ class TimeCut extends Component{
                 <span>09</span>
               </div>
           </div>
-        </a>
+        </Link>
       )
   }
   render(){

@@ -17,7 +17,6 @@ ReactDOM.render((
     </Route>
     <Route path="/list/:type" component={List} />
     <Route path="/details/:type" component={Details} />
-
     <Route path="/hotlist" component={HotList} />
     <Route path="/login" component={Login} />
     <Route path="/personal" component={Personal} />
