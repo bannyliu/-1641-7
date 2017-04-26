@@ -44,9 +44,10 @@ class UpinList extends Component{
                         if(!this.isEmptyObject(value)){
                           return(
                             <li>
-                                <a href="" className="track">
+                                <Link to={`/details/${value.goods_id
+}`} className="track">
                                   <img src={value.thumbnail} className="lazyload" width="187.5" height="187.5" />
-                                </a>
+                                </Link>
                                 <div className="goodList_info">
                                     <div className="selling_point">{value.selling_point}</div>
                                     <div className="g-name">{value.goods_name}</div>
