@@ -7,7 +7,7 @@
   height:1.88rem;
   background-image:url(/images/defaultImg.png);
   background-size:100%;
-  
+
 
 };
 .m-index{
@@ -239,7 +239,6 @@
               @include flexbox();
               @include flex-wrap(wrap);
               li{
-                height:2.7rem;
                 position:relative;
                 width:50%;
                 margin-top:2%;
@@ -247,6 +246,7 @@
                 font-size:.13rem;
                 padding-left:.05rem;
                 a{
+                  background-image:url(/images/defaultImg.png);
                   display:block;
                   img{
                     width:100%;
@@ -285,6 +285,7 @@
                     top:3%;
                     width:.53rem;
                     height:.53rem;
+
                     img{
                       width:100%;
                       @include border-radius(.05rem .05rem 0 0);
@@ -296,10 +297,10 @@
                 }
               }
               li.last_more{
-                height:2.7rem;
                 a{
                   width:100%;
                   height:100%;
+
                   .goods-list-last{
                     height:100%;
                     background-image:url(/images/goods-list-bj.png);

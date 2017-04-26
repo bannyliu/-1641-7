@@ -1,12 +1,13 @@
 import {Component} from 'react'
 import {Link} from 'react-router'
+import Scroller from '../../../../component_dev/scroller/src'
 class BoxGoods extends Component{
   getGoodsList(list){
     return list.map((value,index)=>{
       // console.log(list)
       return(
         <div className="box_goods">
-          <div className="goods_title"><img src={value.cover} / ></div>
+          <div className="goods_title"><Scroller.LazyImage height="50" src={value.cover} / ></div>
           <div className="goods_list">
             <ul>
               {this.getGoodsItems(this.props.BoxGoods[index].goods_list)}
@@ -31,7 +32,7 @@ class BoxGoods extends Component{
     return list.map((value,index)=>{
       return (
         <li>
-          <Link to={`/details/${value.goods_id}`}><img src={value.thumbnail} /></Link>
+          <Link to={`/details/${value.goods_id}`}><Scroller.LazyImage height="188" src={value.thumbnail} /></Link>
           <div className="goods_list_iofo">
             <div className="selling_point">{value.selling_point
 }</div>
@@ -39,7 +40,7 @@ class BoxGoods extends Component{
             <div className="g-price">¥ {value.goods_price
 }<span className="g-market">{value.market_price
 }</span></div>
-            <div className={`g-mark ${value.mark? '':'hide'}`}><img src={value.mark
+            <div className={`g-mark ${value.mark? '':'hide'}`}><Scroller.LazyImage height="53" src={value.mark
 } /></div>
           </div>
         </li>
