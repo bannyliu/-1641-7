@@ -2,40 +2,62 @@ import React,{Component} from 'react'
 
 import MultiList from '../../../component_dev/multilist/src';
 
-class LimitList extends Component{
+import SmallList from './smallList'
 
+import Loading, {loading} from '../../../component_dev/loading/src'
+
+import {Link} from 'react-router'
+class LimitList extends Component{
+    constructor(props){
+      super(props)
+        this.state={
+          currentIndex : 0,
+          activity:[],
+          goods:[{}]
+        }
+    }
+    check_title_index( index ){
+        return index === this.state.currentIndex ? "active" : ""
+    }
+    getTitle(list){
+      return list.map((value,index)=>{
+        return(
+          <div onClick={() => { this.setState({ currentIndex : index }) } } className={ this.check_title_index( index ) }  tag_id={value.tag_id} load="true">
+            <p className="mt10">{value.start_str}</p>
+            <p>{value.slogan}</p>
+          </div>
+        )
+      })
+    }
   render(){
     return(
       <div className="u-content">
           <div className="seckill_nav">
-            <div className="act" tag_id="dedddd2a43ee4305a6a7a1b3c842d701" load="true">
-              <p className="mt10">10:00</p>
-              <p>抢购中</p>
-            </div>
-            <div  tag_id="4f8f3f35c1484c1d8ba0b1dda9be6f1e" load="true">
-              <p className="mt10">14:00</p>
-              <p>即将开始</p>
-            </div>
-            <div  tag_id="e104e1981a554139bab1d0996cd95ce0" load="true">
-              <p className="mt10">20:00</p>
-              <p>即将开始</p>
-            </div>
+            {this.getTitle(this.state.activity)}
           </div>
           <div className="over_time">
             距本场结束
             <div className="time">11:09:49</div>
           </div>
-          <div className="seckill_box">
-              <ul>
-                <li></li>
-              </ul>
-          </div>
+          <SmallList goods = { this.state.goods}/>
           <div className="loading"></div>
       </div>
     )
   }
-
-
-
+  //http://m.ujipin.com/api/v4/feature/554350239d6241508fab51624867e490?tag_id=4f8f3f35c1484c1d8ba0b1dda9be6f1e&offset=0&count=10&offset=0&count=10
+//  http://m.ujipin.com/api/v4/feature/88a0a8895d3747228b10a353c3f905af?tag_id=null&offset=0&count=10&offset=0&count=10
+componentDidMount(){
+  // let type = this.props.type;
+  fetch(`/json/v4/feature/88a0a8895d3747228b10a353c3f905af?tag_id=null&offset=0&count=10&offset=0&count=10`)
+  .then((response)=>(response.json()))
+  .then((res)=>{
+    this.setState({
+      activity:res.data.activity_list,
+      goods:res.data.goods_list
+    })
+    //加载完毕后loading图片消失
+      loading.hide()
+  })
+}
 }
 export default LimitList

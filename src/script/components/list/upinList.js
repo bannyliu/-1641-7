@@ -43,7 +43,6 @@ class UpinList extends Component{
                       renderItem={(value,i)=>{
                         if(!this.isEmptyObject(value)){
                           return(
-
                             <li>
                                 <a href="" className="track">
                                   <img src={value.thumbnail} className="lazyload" width="187.5" height="187.5" />
