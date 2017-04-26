@@ -57,7 +57,7 @@ class UpinDtails extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/json/v4/goods/31355')
+        fetch('/pp/v4/goods/31355')
         .then((response) => response.json())
         .then((res) => {
             // console.log(res.data.attributes)
