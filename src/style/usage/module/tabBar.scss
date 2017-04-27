@@ -6,20 +6,23 @@
   div{
     @include flex();
     height:100%;
-    @include flexbox();
-    @include flex-direction(column);
-    justify-content:center;
-    text-align:center;
-    padding-top:.1rem;
-    padding-bottom:.09rem;
-    width:100%;
-    span{
-      font-size:.1rem;
+    a{
+      display:block;
+      @include flexbox();
+      @include flex-direction(column);
+      justify-content:center;
+      text-align:center;
+      padding-bottom:.09rem;
+      width:100%;
+
+      span{
+        font-size:.1rem;
+      }
+      i{
+        font-size:.2rem;
+      }
     }
-    i{
-      font-size:.2rem;
-    }
-    &.active{
+    .active {
       color:#c59591;
     }
   }

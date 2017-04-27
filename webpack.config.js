@@ -34,7 +34,18 @@ module.exports ={
         changeOrigin: true,
         pathRewrite: {'^/api': ''}
       }
+    ,
+    '/abc': {
+      target: 'https://api.ujipin.com/v5/tag/',
+      changeOrigin: true,
+      pathRewrite: {'^/abc': ''}
+    },
+    '/jj':{
+      target:'http://localhost:9001',
+      changeOrigin: true,
+      pathRewrite:{'^/jj':''}
     }
+  }
   },
   module:{
     loaders:[
