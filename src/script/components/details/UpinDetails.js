@@ -11,13 +11,17 @@ import DetailsCareful from './Careful'
 import DetailsComment from './Comment'
 import DetailsHot from './Hot'
 import DetailsFooter from './Footer'
-//Footer
+
+import Scroller from '../../../component_dev/scroller/src'
+
+
 
 class UpinDtails extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
+            BannerList:[],
             TitleList: [],
             StyleList: {},
             MoreList: {},
@@ -33,24 +37,25 @@ class UpinDtails extends React.Component {
 
     render() {
         return (
-
                 <div className="UpinDtails_F" >
                     <div className="UpinDtails_header" >
                         详情页头部
                     </div>
-                    <div className="UpinDtails_container" >
-                        <div className="UpinDtails_section" >
-                            <DetailsBanner />
-                            <DetailsTitle TitleList = { this.state.TitleList }/>
-                            <DetailsStyle StyleList = { this.state.StyleList }/>
-                            <DetailsMore MoreList = { this.state.MoreList }/>
-                            <DetailsAttribute AttributeList = { this.state.AttributeList }/>
-                            <DetailsIntroduce IntroduceList = { this.state.IntroduceList }/>
-                            <DetailsCareful CarefulList = { this.state.CarefulList }/>
-                            <DetailsComment />
-                            <DetailsHot />
+                    <Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}>
+                        <div className="UpinDtails_container" >
+                            <div className="UpinDtails_section" >
+                                <DetailsBanner BannerList = { this.state.BannerList }/>
+                                <DetailsTitle TitleList = { this.state.TitleList }/>
+                                <DetailsStyle StyleList = { this.state.StyleList }/>
+                                <DetailsMore MoreList = { this.state.MoreList }/>
+                                <DetailsAttribute AttributeList = { this.state.AttributeList }/>
+                                <DetailsIntroduce IntroduceList = { this.state.IntroduceList }/>
+                                <DetailsCareful CarefulList = { this.state.CarefulList }/>
+                                <DetailsComment />
+                                <DetailsHot />
+                            </div>
                         </div>
-                    </div>
+                    </Scroller>
                     <div className="UpinDtails_footer" >
                         <DetailsFooter FooterList = { this.state.FooterList }/>
                     </div>
@@ -66,6 +71,7 @@ class UpinDtails extends React.Component {
         .then((res) => {
             // console.log(res.data.attributes)
             this.setState({
+                BannerList : res.data.splash,
                 TitleList: res.data,
                 StyleList: res.data,
                 MoreList: res.data.brand,
