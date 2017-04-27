@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
-// Header
+
+import Header from '../common/Header'
 import DetailsBanner from './Banner'
 import DetailsTitle from './Title'
 import DetailsStyle from './Style'
@@ -39,7 +40,7 @@ class UpinDtails extends React.Component {
         return (
                 <div className="UpinDtails_F" >
                     <div className="UpinDtails_header" >
-                        详情页头部
+                        <Header />
                     </div>
                     <Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}>
                         <div className="UpinDtails_container" >
