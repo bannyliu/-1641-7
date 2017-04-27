@@ -8,7 +8,7 @@ class  Header extends Component{
   render(){
     return(
       <div className="m-header">
-        <div className="header_logo"><img src="/images/logo.png" /></div>
+        <div className="header_logo"><Link to={'/'}><img src="/images/logo.png" /></Link></div>
         <div className="header_right">
             <a className="header_seacrch" onClick={this.getSearch}><img src="/images/search.png" /></a>
             <Link to={"/login"} className="header_user"><img src="/images/user.png" /></Link>

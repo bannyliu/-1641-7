@@ -20,7 +20,7 @@ class Banner extends Component{
   }
   render(){
     return(
-      <Carousel extraClass="yo-carousel-a">
+      <Carousel extraClass="yo-carousel-b">
          {this.abc(this.props.bannerList)}
       </Carousel>
     )

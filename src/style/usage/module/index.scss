@@ -1,20 +1,19 @@
 @import "../component/carousel";
-@include yo-carousel(
-  $name:a,
-  $index-bgcolor:#dedede,
-  $on-index-bgcolor:#E74C3C
-){
-  height:1.88rem;
-  background-image:url(/images/defaultImg.png);
-  background-size:100%;
 
-
-};
 .m-index{
   @include flexbox();
   @include flex-direction(column);
   height:100%;
   .m-board{
+    @include yo-carousel(
+      $name:b,
+      $index-bgcolor:#dedede,
+      $on-index-bgcolor:#E74C3C
+    ){
+      height:1.88rem;
+      background-image:url(/images/defaultImg.png);
+      background-size:100%;
+    };
     @include flex();
     overflow:hidden;
     width:100%;
