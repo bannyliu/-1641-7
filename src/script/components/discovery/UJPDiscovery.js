@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-
+import SDiscovery from './sDiscovery'
 class UJPDiscovery extends  Component{
   constructor(props){
     super(props)
@@ -10,14 +10,15 @@ class UJPDiscovery extends  Component{
     }
   }
   check_title_index( index ){
-      return index === this.state.theme.theme_id ? "active" : ""
+      return index === this.state.currentIndex ? "active" : ""
   }
 
   getNav(list){
+    console.log(list)
     return list.map((value,index)=>{
       return(
         <li onClick={() => { this.setState({ currentIndex : index }) } } className={ this.check_title_index( index ) }>
-          <a>{value.theme.name}</a>
+          <a>{value.name}</a>
         </li>
       )
     })
@@ -32,19 +33,8 @@ class UJPDiscovery extends  Component{
               {this.getNav(this.state.theme)}
             </ul>
           </div>
-          <div className="dis-content">
-              <dl>
-                <p className="theme">生活时尚与文艺</p>
-                <dt>
-                  <img src="http://img1.ujipin.com/940e37b3818db65c2e2605aae8fee666?UCloudPublicKey=ucloudjiawoyong@ujipin.cn14466281690001077321672&Expires=1493817673&Signature=qPBNbgWTwXA3Jd1WoiAO2KoPTPI=&format=JPEG"/>
-                </dt>
-                <dd className="title">
-                  <p>高颜值野餐攻略，春光正好我们去野餐吧！</p>
-                </dd>
-                <dd className="intro">
-                  <p>没有野餐的春天是对好时光的辜负~</p>
-                </dd>
-              </dl>
+          <div className="content">
+              <SDiscovery goods = { this.state.feature}/>
           </div>
       </div>
     )
