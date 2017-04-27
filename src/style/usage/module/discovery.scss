@@ -1,0 +1,86 @@
+.m-discovery{
+  width:100%;
+  height:100%;
+  @include flexbox();
+  @include flex-direction(column);
+    .section{
+      @include flex();
+      width:100%;
+        .nav-list{
+          overflow-x: scroll;
+          background:#fff;
+          width:100%;
+          height:.42rem;
+            .name{
+              width:5rem;
+              height:.42rem;
+              line-height:.42rem;
+              white-space: nowrap;
+                li{
+                  display:inline-block;
+                  padding-left:.11rem;
+                  padding-right:.11rem;
+                  color:#9a9a9a;
+                    a{
+                      font-size:12px;
+                      @include border(0 0 3px 0,#ffffff,solid);
+                      padding-bottom:.12rem;
+                    }
+                }
+                .active{
+                  color:#a8554d;
+                    a{
+                      color:#a8554d;
+                      @include border(0 0 3px 0,#a8554d,solid);
+                    }
+                }
+            }
+        }
+        .dis-content{
+          padding:.1rem;
+          width:100%;
+          background:#f2f2f2;
+            dl{
+              height:3.17rem;
+              background:#fff;
+              border-radius:.05rem;
+                .theme{
+                  height:.41rem;
+                  font-size:.12rem;
+                  margin-left:.32rem;
+                  color:#919191;
+                  line-height:.41rem;
+                }
+                dt{
+                  height:1.71rem;
+                    img{
+                      width:100%;
+                      height:100%;
+                    }
+                }
+                .title{
+                  width:100%;
+                  height:.36rem;
+                  font-size:.16rem;
+                  color:#424242;
+                  padding-top:.2rem;
+                  padding-left:.1rem;
+                    p{
+                      margin-bottom:0;
+                    }
+                }
+                .intro{
+                  width:100%;
+                  height:.32rem;
+                  font-size:.12rem;
+                  padding-top:.2rem;
+                  padding-left:.1rem;
+                  color:#8e8e8e;
+                    p{
+                      margin-bottom:0;
+                    }
+                }
+            }
+        }
+    }
+}

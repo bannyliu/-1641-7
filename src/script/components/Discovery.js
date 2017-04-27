@@ -13,7 +13,6 @@ class Discovery extends Component{
               <UJPDiscovery />
               <TabBar />
               <Menu />
-
         </div>
 
       )
