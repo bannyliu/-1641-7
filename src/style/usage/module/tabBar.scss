@@ -2,7 +2,8 @@
   width:100%;
   height:.5rem;
   @include flexbox();
-  background-color:#fff;
+  background-color:#c59591;
+  opacity:.5;
   div{
     @include flex();
     height:100%;
@@ -14,7 +15,8 @@
       text-align:center;
       padding-bottom:.09rem;
       width:100%;
-
+      color:#fff;
+      font-weight:bold;
       span{
         font-size:.1rem;
       }
@@ -23,7 +25,7 @@
       }
     }
     .active {
-      color:#c59591;
+      color:#000;
     }
   }
 }
