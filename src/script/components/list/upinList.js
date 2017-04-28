@@ -1,8 +1,8 @@
 import React,{Component} from 'react'
-// import Header from '../common/Header'
 import {Link} from 'react-router'
 import Loading, {loading} from '../../../component_dev/loading/src'
 import List from '../../../component_dev/list/src'
+import Scroller from '../../../component_dev/scroller/src'
 class UpinList extends Component{
     constructor(props){
       super(props)
@@ -15,6 +15,7 @@ class UpinList extends Component{
 
     //图片没有加载完显示的加载
     componentWillMount() {
+      console.log(this.props.type)
       loading.show({
       // maskOffset: [0, ],
       text: '正在加载'
@@ -26,14 +27,13 @@ class UpinList extends Component{
           return !1;
       return !0
     }
-
     render(){
       return (
         <div className="u-list">
             <section>
+              <Scroller scrollX={false} scrollY={true} extraClass="yo-scroller-b">
                 <div className="brandList">
                     <img src={this.state.bannerPic} />
-                    console.log(this.state.bannerPic)
                 </div>
                 <div className="goodList">
                   <ul>
@@ -83,6 +83,7 @@ class UpinList extends Component{
                     </List>
                   </ul>
                 </div>
+              </Scroller>
             </section>
         </div>
       )

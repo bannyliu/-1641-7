@@ -1,10 +1,11 @@
 .m-discovery{
-  width:100%;
-  height:100%;
   @include flexbox();
   @include flex-direction(column);
+  height:100%;
+
     .section{
       @include flex();
+      overflow:hidden;
       width:100%;
         .nav-list{
           overflow-x: scroll;
@@ -39,6 +40,7 @@
         .content{
           height:100%;
           overflow-y: scroll;
+
           .dis-content{
             padding:.1rem;
             width:100%;
@@ -47,6 +49,8 @@
                 height:3.17rem;
                 background:#fff;
                 border-radius:.05rem;
+                margin-bottom:.1rem;
+                box-shadow: 2px 2px 2px 2px #eeeeee;
                   .theme{
                     height:.41rem;
                     font-size:.12rem;
@@ -68,8 +72,12 @@
                     color:#424242;
                     padding-top:.2rem;
                     padding-left:.1rem;
+
                       p{
                         margin-bottom:0;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow:hidden;
                       }
                   }
                   .intro{

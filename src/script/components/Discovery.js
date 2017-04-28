@@ -8,7 +8,6 @@ class Discovery extends Component{
     render(){
       return(
         <div className="m-discovery">
-
               <Header />
               <UJPDiscovery />
               <TabBar />
