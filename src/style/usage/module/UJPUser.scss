@@ -1,1 +1,592 @@
 @charset "UTF-8";
+
+.m-user{
+    width:100%;
+    @include flexbox();
+    @include flex-direction(column);
+    .User{
+        @include flex() ;
+        width:100%;
+        height:100%;
+        background: #f2f2f2;
+        overflow-y: scroll;
+        .User_Sonuser{
+            width:100%;
+            height:1.29rem;
+            background: #fff;
+            .SonUser_header{
+                width:100%;
+                height:.78rem;
+                // background: red;
+                padding-top: .1rem;
+                .SonUser_pic{
+                    // width:1.25rem;
+                    height:.68rem;
+                    margin-left:40%;
+                    position: relative;
+                    img{
+                        width:.7rem;
+                        height:.68rem;
+                    }
+                    span{
+                        height:.15rem;
+                        line-height: .15rem;
+                        text-align: center;
+                        display: inline-block;
+                        margin-left: .1rem;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+                .SonUser_name{
+                    p{
+                        width:100%;
+                        margin-top:.1rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }  // SonUser
+
+        .User_Discount{
+            width:100%;
+            height:.49rem;
+            background: #f2f2f2;
+            // opacity: .3;
+            line-height: .49rem;
+            .Discount_name{
+                width:100%;
+                height:100%;
+                ul{
+                    @include flexbox();
+                    width:100%;
+                    // height:100%;
+
+                    li{
+                        @include flex();
+                        display: inline-block;
+                        text-align: center;
+                        a{
+                            width:100%;
+                            height:.14rem;
+                            line-height:.14rem;
+                            font-size: .14rem;
+                            @include border(0 1px 0 0,#000,solid);
+                            display: inline-block;
+                            color:#000;
+                            &.noR{
+                                @include border(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }  //User_Discount
+
+        .User_Server{
+            width:100%;
+            background: #f2f2f2;
+            .Server_Pass{
+                width:100%;
+                // height:1.32rem;
+                background: #fff;
+                padding-left:.44rem;
+
+                .Server_Pass_title{
+                    width:100%;
+                    height:.46rem;
+                    line-height: .46rem;
+                    position: relative;
+                    .title_pic{
+                        width:.36rem;
+                        height:.16rem;
+                        background-image: url(/images/User/pass.jpg);
+                        background-size: 100%;
+                        display: block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.14rem;
+                    }
+                    .title_name{
+                        margin-left:.2rem;
+                    }
+                }
+
+                .Server_Pass_member{
+                    width:100%;
+                    height:.42rem;
+                    line-height: .42rem;
+                    position: relative;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    .member_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .member_details{
+                        padding-right:.44rem;
+                        width: 100%;
+                        display: inline-block;
+                        text-align: right;
+                        color:#c3c2c1;
+                    }
+                    .member_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:.18rem;
+                        top:.15rem;
+                    }
+                }  //Server_Pass_member
+
+                .Server_Pass_code{
+                    width:100%;
+                    height:.42rem;
+                    line-height: .42rem;
+                    position: relative;
+                    .code_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .code_details{
+                        padding-right:.44rem;
+                        width: 100%;
+                        display: inline-block;
+                        text-align: right;
+                        color:#c3c2c1;
+                    }
+                    .code_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:.18rem;
+                        top:.15rem;
+                    }
+                } //Server_Pass_code
+            }  //Server_Pass
+
+
+            .Server_Order{
+                width:100%;
+                // height:1.3rem;
+                margin-top:.2rem;
+                background: #fff;
+                padding:0 .44rem;
+
+                .Order_title{
+                    width:100%;
+                    height:.46rem;
+                    position: relative;
+                    line-height: .46rem;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    // display: inline-block;
+                    i{
+                        width:.19rem;
+                        height:.2rem;
+                        background-image: url(/images/User/myd.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.12rem;
+                    }
+                    .Order_title_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .Order_title_details{
+                        // padding-right:.44rem;
+                        width: 100%;
+                        display: inline-block;
+                        text-align: right;
+                        color:#c3c2c1;
+                    }
+                    .Order_title_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:-.24rem;
+                        top:.15rem;
+                    }
+                }
+                .Order_particular{
+                    @include flexbox();
+                    width:100%;
+                    height:.64rem;
+                    line-height: .64rem;
+                    text-align: center;
+                    padding-top:.1rem;
+                    .payment{
+                        @include flex();
+                        height: .4rem;
+                        line-height: .64rem;
+                        text-align: center;
+                        display: inline-block;
+                        position: relative;
+                        .pay{
+                            width:.28rem;
+                            height:.24rem;
+                            background-image:url(/images/User/pay.jpg);
+                            background-size: 90%;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            position: absolute;
+                            top:0;
+                            left:36%;
+                        }
+                        .payName{
+                            color: #000;
+                        }
+                    }
+                    .receipt{
+                        @include flex();
+                        height: .4rem;
+                        line-height: .64rem;
+                        text-align: center;
+                        display: inline-block;
+                        position: relative;
+                        .deliver{
+                            width:.28rem;
+                            height:.24rem;
+                            background-image:url(/images/User/deliver.jpg);
+                            background-size: 80%;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            position: absolute;
+                            top:0;
+                            left:36%;
+                        }
+                        .deliverName{
+                            color: #000;
+                        }
+                    }
+                    .comment{
+                        @include flex();
+                        height: .4rem;
+                        line-height: .64rem;
+                        text-align: center;
+                        display: inline-block;
+                        position: relative;
+                        .edit{
+                            width:.28rem;
+                            height:.24rem;
+                            background-image:url(/images/User/edit.jpg);
+                            background-size: 80%;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            position: absolute;
+                            top:0;
+                            left:36%;
+                        }
+                        .editName{
+                            color: #000;
+                        }
+                    }
+                    .service{
+                        @include flex();
+                        height: .4rem;
+                        line-height: .64rem;
+                        text-align: center;
+                        display: inline-block;
+                        position: relative;
+                        .refund{
+                            width:.28rem;
+                            height:.24rem;
+                            background-image:url(/images/User/refund.jpg);
+                            background-size: 80%;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                            position: absolute;
+                            top:0;
+                            left:36%;
+                        }
+                        .refundName{
+                            color: #000;
+                        }
+                    }
+                }
+            }  // Server_Order
+
+            .Server_Function{
+                width:100%;
+                margin-top:.2rem;
+                margin-bottom: .2rem;
+                background: #fff;
+                padding:0 .44rem;
+                .Function_invitation{
+                    width:100%;
+                    height:.45rem;
+                    line-height: .45rem;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    .Function_invitation_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .Function_invitation_details{
+                        width: 100%;
+                        display: inline-block;
+                        text-align: right;
+                        color:#c3c2c1;
+                    }
+                    .Function_invitation_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:-.24rem;
+                        top:.15rem;
+                    }
+                    i{
+                        width:.19rem;
+                        height:.2rem;
+                        background-image: url(/images/User/invitation.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.12rem;
+                    }
+                }
+                .Function_balance{
+                    width:100%;
+                    height:.45rem;
+                    line-height: .45rem;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    .Function_balance_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .Function_balance_details{
+                        width: 100%;
+                        display: inline-block;
+                        text-align: right;
+                        color:#c3c2c1;
+                        span{
+                            color:#e85546;
+                            display: inline-block;
+                        }
+                    }
+                    .Function_balance_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:-.24rem;
+                        top:.15rem;
+                    }
+                    i{
+                        width:.19rem;
+                        height:.2rem;
+                        background-image: url(/images/User/balance.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.12rem;
+                    }
+                }
+                .Function_collection{
+                    width:100%;
+                    height:.45rem;
+                    line-height: .45rem;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    .Function_collection_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+
+                    .Function_collection_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:-.24rem;
+                        top:.15rem;
+                    }
+                    i{
+                        width:.19rem;
+                        height:.2rem;
+                        background-image: url(/images/User/collection.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.12rem;
+                    }
+                }
+                .Function_footprint{
+                    width:100%;
+                    height:.45rem;
+                    line-height: .45rem;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    .Function_footprint_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .Function_footprint_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:-.24rem;
+                        top:.15rem;
+                    }
+                    i{
+                        width:.19rem;
+                        height:.2rem;
+                        background-image: url(/images/User/footprint.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.12rem;
+                    }
+                }
+                .Function_customer{
+                    width:100%;
+                    height:.45rem;
+                    line-height: .45rem;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    .Function_customer_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .Function_customer_details{
+                        width: 100%;
+                        display: inline-block;
+                        text-align: right;
+                        color:#c3c2c1;
+                    }
+                    .Function_customer_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:-.24rem;
+                        top:.15rem;
+                    }
+                    i{
+                        width:.19rem;
+                        height:.2rem;
+                        background-image: url(/images/User/customer.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.12rem;
+                    }
+                }
+                .Function_address{
+                    width:100%;
+                    height:.45rem;
+                    line-height: .45rem;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    .Function_address_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .Function_address_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:-.24rem;
+                        top:.15rem;
+                    }
+                    i{
+                        width:.19rem;
+                        height:.2rem;
+                        background-image: url(/images/User/address.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.12rem;
+                    }
+                }
+                .Function_setup{
+                    width:100%;
+                    height:.45rem;
+                    line-height: .45rem;
+                    @include border(0 0 1px 0 ,#ddd,solid);
+                    .Function_setup_name{
+                        position: absolute;
+                        left:0;
+                        display: inline-block;
+                    }
+                    .Function_setup_Arrow{
+                        width:.06rem;
+                        height:.13rem;
+                        display: inline-block;
+                        background-image:url(/images/User/right.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right:-.24rem;
+                        top:.15rem;
+                    }
+                    i{
+                        width:.19rem;
+                        height:.2rem;
+                        background-image: url(/images/User/setup.jpg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        position: absolute;
+                        left:-.3rem;
+                        top:.12rem;
+                    }
+                }
+            }
+
+
+        }  // User_server
+
+    } // User
+
+}  // m-user
