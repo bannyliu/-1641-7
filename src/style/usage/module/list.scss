@@ -8,10 +8,13 @@
   height:100%;
   @include flexbox();
   @include flex-direction(column);
+
     section{
-      overflow-y: scroll;
+      overflow:hidden;
       @include flex();
       width:100%;
+      .yo-scroller-b{
+        height:100%;
       .brandList{
         height:2.81rem;
         width:100%;
@@ -111,4 +114,5 @@
         line-height:.5rem;
       }
     }
+  }
 }
