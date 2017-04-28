@@ -2,13 +2,19 @@ import {Component} from 'react'
 import {Link} from 'react-router'
 import Scroller from '../../../../component_dev/scroller/src'
 class SlideGoods extends Component{
-
+  isEmptyObject(e) {  // 判断对象中有没有数据的方法
+      var t;
+      for (t in e)
+          return !1;
+      return !0
+  }
   getSlideGoods(list){
+  if(!this.isEmptyObject(list)){
     return list.map((value,index)=>{
       return(
         <div className="slideGoods">
           <div className="slide_images">
-              <Link to={`/list/${value.feature_id
+              <Link to={`/list/${value.feature_id||value.tag_id
 }`}>
                   <img src={value.cover} />
               </Link>
@@ -25,6 +31,7 @@ class SlideGoods extends Component{
         </div>
       )
     })
+  }
   }
 
 

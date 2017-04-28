@@ -2,7 +2,14 @@ import {Component} from 'react'
 import {Link} from 'react-router'
 import Scroller from '../../../../component_dev/scroller/src'
 class BoxGoods extends Component{
+  isEmptyObject(e) {  // 判断对象中有没有数据的方法
+      var t;
+      for (t in e)
+          return !1;
+      return !0
+  }
   getGoodsList(list){
+  if(!this.isEmptyObject(list)){
     return list.map((value,index)=>{
       // console.log(list)
       return(
@@ -28,7 +35,9 @@ class BoxGoods extends Component{
       )
     })
   }
+  }
   getGoodsItems(list){
+  if(!this.isEmptyObject(list)){
     return list.map((value,index)=>{
       return (
         <li>
@@ -46,7 +55,10 @@ class BoxGoods extends Component{
         </li>
       )
     })
+
   }
+}
+
   render(){
     return(
       <div className="m-boxGoods">

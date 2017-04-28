@@ -61,9 +61,7 @@ class Menu extends Component {
             </div>
         </div>
       </div>
-
     )
-
   }
   componentDidMount(){
     fetch('/json/v4/tags/discovery')
@@ -76,18 +74,5 @@ class Menu extends Component {
     })
   }
 }
-// window.onload=function(){
-//   setTimeout(function(){
-//     var item = document.querySelector('.item ul')
-//     console.log(item)
-//     for (var i =0;i<item.length;i++){
-//       item[i].style.display="none"
-//     }
-//
-//     var i = document.querySelector('.t i')
-//
-//
-//   },500)
-//
-// }
+
 export  default Menu
