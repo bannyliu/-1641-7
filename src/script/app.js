@@ -12,6 +12,8 @@ import Agreement from './components/login_register/agreement'
 import User from './components/User'
 import Category from './components/Category'
 import Discovery from './components/Discovery'
+import Search from './components/UJPSearch'
+import SearchList from './components/SearchList'
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -27,5 +29,7 @@ ReactDOM.render((
     <Route path="/user" component={User} />
     <Route path="/category" component={Category} />
     <Route path="/discovery" component={Discovery} />
+    <Route path="/search" component={Search} />
+    <Route path="/searchlist/:type" component={SearchList} />
   </Router>
 ),document.getElementById('root'))
