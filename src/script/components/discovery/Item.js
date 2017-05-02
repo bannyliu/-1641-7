@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 
-class SDiscovery extends  Component{
+class Item extends  Component{
 
   getfunction(list){
     return list.map((value,i)=>{
@@ -26,11 +26,11 @@ class SDiscovery extends  Component{
   render(){
 
     return (
-    <div className="dis-content">
+    <div className="item">
         {this.getfunction(this.props.goods)}
     </div>
     )
   }
 
 }
-export default SDiscovery
+export default Item

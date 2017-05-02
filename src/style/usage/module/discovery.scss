@@ -1,3 +1,8 @@
+.yo-scroller {
+  height: 100%;
+  touch-action: none;
+}
+
 .m-discovery{
   @include flexbox();
   @include flex-direction(column);
@@ -39,12 +44,23 @@
         }
         .content{
           height:100%;
-          overflow-y: scroll;
 
-          .dis-content{
+            .yo-carousel{
+              height:100%;
+              @include flexbox();
+              @include flex();
+              width:100%;
+            }
+            ul.cont{
+              height:100%;
+            }
+          .item{
+            overflow-y: scroll;
+            text-align:left;
             padding:.1rem;
-            width:100%;
             background:#f2f2f2;
+            height:100%;
+            overflow-y: scroll;
               dl{
                 height:3.17rem;
                 background:#fff;
