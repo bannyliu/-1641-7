@@ -46,7 +46,7 @@ class Menu extends Component {
               <div className="search-t">
                   <div className="input-box">
                       <div className="go-search-box">
-                          <input type="text" className="go-search" placeholder="请输入搜索内容" />
+                          <input type="text" disabled="disabled" className="go-search" placeholder="请输入搜索内容" />
                           <i></i>
                       </div>
                   </div>
