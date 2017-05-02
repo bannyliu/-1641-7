@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import Item from './Item'
+import Item from './item'
 import Scroller from '../../../component_dev/scroller/src'
 import Carousel from '../../../component_dev/carousel/src'
 class UJPDiscovery extends  Component{
