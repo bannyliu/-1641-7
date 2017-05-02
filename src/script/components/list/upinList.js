@@ -65,10 +65,10 @@ class UpinList extends Component{
                       useLoadMore={true}
                         onLoad={()=>{
                             let type = this.props.type
-                            fetch(`/json/v4/tags/${type}?page=${++this.state.page}`)
+                            fetch(`/json/v4/tags/${type}?page=${++this.state.page}&count=10`)
                             .then((response)=>response.json())
                             .then((res)=>{
-                              if (this.state.page <= 2 ) {
+                              if (this.state.page <= 3 ) {
                                 this.setState({
                                   goodList:this.state.goodList.concat(res.data.goods_list)
                                 })
