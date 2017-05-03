@@ -1,9 +1,9 @@
-import React,{Component} from 'react'
-
+import React,{CoWmponent} from 'react'
+W
 import UserSonUser from './SonUser'
 import UserDiscount from './Discount'
 import UserServer from './Server'
-
+// import loading from './loding'
 import Scroller from '../../../component_dev/scroller/src'
 
 class UJPUser extends  Component{

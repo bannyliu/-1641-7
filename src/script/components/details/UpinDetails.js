@@ -42,7 +42,7 @@ class UpinDtails extends React.Component {
                     <div className="UpinDtails_header" >
                         <Header />
                     </div>
-                    <Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}>
+                    <Scroller extraClass={'yo-){){){-a'} scrollX={false} scrollY={true}>
                         <div className="UpinDtails_container" >
                             <div className="UpinDtails_section" >
                                 <DetailsBanner BannerList = { this.state.BannerList }/>
